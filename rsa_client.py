@@ -109,3 +109,5 @@ rsac = RsaClient(PUB_KEY, PRI_KEY)
 if __name__ == "__main__":
     data = rsac.private_encrypt('abc')
     print rsac.public_decrypt(data)
+    data = rsac.private_chunk_encrypt('abc', 117)
+    print rsac.public_chunk_decrypt(data, 128)
